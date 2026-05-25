@@ -1,0 +1,60 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odh_customer_vendor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-31 16:27+0000\n"
+"PO-Revision-Date: 2026-01-31 16:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odh_customer_vendor
+#: model:ir.model,name:odh_customer_vendor.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: odh_customer_vendor
+#: model:ir.model.fields,field_description:odh_customer_vendor.field_res_partner__odh_customer
+#: model:ir.model.fields,field_description:odh_customer_vendor.field_res_users__odh_customer
+msgid "Customer"
+msgstr ""
+
+#. module: odh_customer_vendor
+#: model:ir.model.fields,help:odh_customer_vendor.field_res_partner__odh_customer
+#: model:ir.model.fields,help:odh_customer_vendor.field_res_users__odh_customer
+msgid ""
+"Enable this option if the contact is a customer. This allows you to create "
+"sales orders, invoices, and track receivables for this contact."
+msgstr ""
+
+#. module: odh_customer_vendor
+#: model:ir.model.fields,help:odh_customer_vendor.field_res_partner__odh_vendor
+#: model:ir.model.fields,help:odh_customer_vendor.field_res_users__odh_vendor
+msgid ""
+"Enable this option if the contact is a vendor or supplier. This allows you "
+"to create purchase orders, vendor bills, and track payables for this "
+"contact."
+msgstr ""
+
+#. module: odh_customer_vendor
+#: model:ir.model,name:odh_customer_vendor.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: odh_customer_vendor
+#: model:ir.model,name:odh_customer_vendor.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: odh_customer_vendor
+#: model:ir.model.fields,field_description:odh_customer_vendor.field_res_partner__odh_vendor
+#: model:ir.model.fields,field_description:odh_customer_vendor.field_res_users__odh_vendor
+msgid "Vendor"
+msgstr ""

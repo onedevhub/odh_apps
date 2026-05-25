@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Vendor Option - Odoo Module</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* ========================================
+           ELEVATE STYLE - COMPLETE CSS
+        ======================================== */
+        
+        :root {
+            /* Elevate Color Palette */
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --accent-color: #0dcaf0;
+            --dark-bg: #ffffff;
+            --darker-bg: #f8f9fa;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --text-muted: #8d99ae;
+            --card-bg: #ffffff;
+            --border-color: #e9ecef;
+            --accent-glow: rgba(13, 110, 253, 0.1);
+            
+            /* Keep cyan for compatibility */
+            --cyan-primary: #0d6efd;
+            --cyan-secondary: #0b5ed7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--darker-bg);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Clean Background */
+        .bg-animated {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+            z-index: -1;
+        }
+
+        .bg-animated::before {
+            display: none;
+        }
+
+        /* Modern Navigation Bar */
+        .floating-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            margin: 0;
+            max-width: 100%;
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            background: #ffffff;
+            backdrop-filter: none;
+            border: none;
+            border-radius: 0;
+            padding: 1rem 2rem;
+            box-shadow: none;
+        }
+
+        .logo-section img {
+            max-width: 180px;
+        }
+
+        .nav-badges {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .cyber-badge {
+            background: var(--primary-color);
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border: none;
+            box-shadow: none;
+            transition: all 0.3s ease;
+            color: #ffffff;
+        }
+
+        .cyber-badge:hover {
+            transform: translateY(-2px);
+            background: var(--cyan-secondary);
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+        }
+
+        /* Hero Section - Elevate Style */
+        .hero-asymmetric {
+            padding: 80px 0 60px;
+            position: relative;
+            background-color: #171c35;
+            heading-color: #ffffff;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            padding: 0;
+        }
+
+        .glitch-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .neon-line {
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 1rem 0 1.5rem 0;
+        }
+
+        .hero-text {
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .hero-text strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Video Card - Clean Style */
+        .video-hologram {
+           /* background: #ffffff; */
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-hologram::before {
+            display: none;
+        }
+
+        .video-hologram-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hologram-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.25);
+        }
+
+        .video-link {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .video-link:hover {
+            color: var(--cyan-secondary);
+        }
+
+        /* Feature Cards - Elevate Style */
+        .features-hex {
+            padding: 80px 0;
+            background: var(--darker-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title-glow {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .hex-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .hex-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .hex-card:hover {
+            transform: translateY(-5px);
+            background: #ffffff;
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 30px rgba(13, 110, 253, 0.15);
+        }
+
+        .hex-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+
+        .hex-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* Tabbed Navigation - Clean Style */
+        .cyber-tabs-wrapper {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .tab-nav-cyber {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .cyber-tab-btn {
+            background: #ffffff;
+            border: 2px solid var(--border-color);
+            color: var(--text-light);
+            padding: 0.75rem 1.75rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .cyber-tab-btn.active {
+            background: var(--primary-color);
+            color: #ffffff;
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+        }
+
+        .cyber-tab-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .cyber-tab-btn.active:hover {
+            color: #ffffff;
+        }
+
+        .tab-panel {
+            background: var(--darker-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 40px;
+            backdrop-filter: none;
+        }
+
+        /* Screenshot Display */
+        .screenshot-frame {
+            margin: 40px 0;
+        }
+
+        .screenshot-label {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        .screenshot-frame img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-frame:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Release Timeline */
+        .timeline-item {
+            background: #ffffff;
+            border-left: 3px solid var(--primary-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 30px;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+        }
+
+        .timeline-item:hover {
+            background: #ffffff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .timeline-version {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .status-chip {
+            display: inline-block;
+            background: #28a745;
+            color: #ffffff;
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-right: 0.8rem;
+        }
+
+        .status-initial {
+            background: var(--primary-color);
+        }
+
+        /* FAQ Accordion */
+        .faq-accordion {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .faq-accordion:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.1);
+        }
+
+        .faq-q {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .faq-q i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .faq-a {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            padding-left: 2.2rem;
+            line-height: 1.7;
+        }
+
+        .faq-a a {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--primary-color);
+        }
+
+        /* Support CTA */
+        .support-cta {
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.08), rgba(13, 110, 253, 0.05));
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .support-cta a {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .support-cta .fa {
+            font-size: 1.75rem;
+        }
+
+        /* Language Section */
+        .lang-showcase {
+            padding: 80px 0;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .lang-text {
+            color: var(--text-light);
+            font-size: 1rem;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .lang-text a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .lang-flags {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .lang-flags img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            object-fit: cover;
+        }
+
+        .lang-flags img:hover {
+            transform: scale(1.1);
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 20px rgba(13, 110, 253, 0.2);
+        }
+
+        /* Action Buttons */
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .cyber-action-btn {
+            background: var(--primary-color);
+            border: none;
+            border-radius: 4px;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .cyber-action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(13, 110, 253, 0.25);
+            background: var(--cyan-secondary);
+            color: #ffffff;
+        }
+
+        .cyber-action-btn .fa {
+            font-size: 1.3rem;
+        }
+
+        /* Service Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .service-cube {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-cube:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.15);
+        }
+
+        .service-icon-wrap {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-icon-wrap img {
+            max-width: 100%;
+            filter: none;
+        }
+
+        .service-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Contact Section */
+        .contact-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+
+        .contact-cyber-btn {
+            padding: 1.25rem;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            border: 2px solid;
+        }
+
+        .skype-cyber {
+            background: #ffffff;
+            color: #00aff0;
+            border-color: #00aff0;
+        }
+
+        .skype-cyber:hover {
+            background: #00aff0;
+            color: #ffffff;
+            box-shadow: 0 6px 20px rgba(0, 175, 240, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .email-cyber {
+            background: #ffffff;
+            color: #f56565;
+            border-color: #f56565;
+        }
+
+        .email-cyber:hover {
+            background: #f56565;
+            color: white;
+            box-shadow: 0 6px 20px rgba(245, 101, 101, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Product Grid */
+        .product-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .product-tile {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-tile:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.15);
+        }
+
+        .product-tile img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .product-tile:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Alert */
+        .cyber-alert {
+            background: linear-gradient(135deg, rgba(245, 101, 101, 0.1), rgba(229, 62, 62, 0.05));
+            border: 1px solid #f56565;
+            border-radius: 6px;
+            padding: 1.25rem;
+            color: #e53e3e;
+            font-size: 0.95rem;
+            margin: 2rem auto;
+            max-width: 900px;
+        }
+
+        .cyber-alert a {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .glitch-title {
+                font-size: 2.25rem;
+            }
+
+            .section-title-glow {
+                font-size: 1.75rem;
+            }
+
+            .contact-split {
+                grid-template-columns: 1fr;
+            }
+
+            .hex-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-badges {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .glitch-title {
+                font-size: 1.75rem;
+            }
+
+            .tab-panel {
+                padding: 2rem 1.25rem;
+            }
+
+            .cyber-tab-btn {
+                padding: 0.65rem 1.25rem;
+                font-size: 0.875rem;
+            }
+            
+            .hero-asymmetric {
+                padding: 60px 0 40px;
+            }
+            
+            .features-hex {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animated"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-asymmetric">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="glitch-title" style="color: #ffffff;">Customer Vendor Option</h1>
+                    <div class="neon-line"></div>
+                    <p class="hero-text">
+                        In earlier versions of Odoo, Contacts included separate boolean fields to easily differentiate between
+                        <strong>Customers</strong> and <strong>Vendors</strong>. However, in Odoo 13, these fields were removed,
+                        which makes it inconvenient to clearly identify and manage customers and vendors separately.
+                    </p>
+
+                    <p class="hero-text">
+                        To solve this issue, we have developed this module that restores the classic customer and vendor
+                        separation functionality—just like in previous Odoo versions.
+                    </p>
+
+                    <p class="hero-text"><strong>Key Features</strong></p>
+
+                    <ul class="hero-text">
+                        <li>Adds two separate boolean fields in Contacts:
+                            <ul>
+                                <li><strong>Customer</strong></li>
+                                <li><strong>Vendor</strong></li>
+                            </ul>
+                        </li>
+                        <li>Easily identify and manage customers and vendors independently</li>
+                        <li>Simplifies filtering, searching, and reporting</li>
+                        <li>Improves usability for accounting, sales, and purchase workflows</li>
+                        <li>Seamless integration with Odoo 13</li>
+                    </ul>
+
+                    <p class="hero-text">
+                        With this module, you can work with Customers and Vendors exactly like older Odoo versions, making
+                        partner management clearer, faster, and more efficient.
+                    </p>
+
+                    <p class="hero-text"><strong>Why Use This Module?</strong></p>
+
+                    <ul class="hero-text">
+                        <li>Ideal for users migrating from older Odoo versions</li>
+                        <li>Eliminates confusion caused by merged partner roles</li>
+                        <li>Enhances data clarity and operational efficiency</li>
+                        <li>Lightweight and easy to use</li>
+                    </ul>
+
+                    <p class="hero-text">
+                        Restore the familiar and effective customer and vendor management experience in
+                        <strong>Odoo 13</strong> with this module.
+                    </p>
+
+                </div>
+                <div>
+                    <div class="video-hologram">
+                        <div class="video-hologram-content">
+                            <div style="margin-bottom: 2rem;">
+                                <img src="app_img/banner_image.jpg" alt="Customer Vendor Option" style="max-width: 500px; width: 100%; border-radius: 10%; border: 3px solid var(--cyan-primary); box-shadow: 0 8px 32px rgba(0, 184, 212, 0.3);">
+                            </div>
+                           <!-- <div class="hologram-icon">
+                                <i class="fa fa-play"></i>
+                            </div> -->
+                            <a href="https://youtu.be/4i50OvYU704" target="_blank" class="video-link">
+                                <img src="img/video.png" alt="Video" style="width: 60px; margin-bottom: 0.5rem;">
+                                Watch How It Works<br>
+                                <span style="font-size: 1rem; color: var(--text-muted);">Click to view demo video</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-hex">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title-glow">Features</h2>
+                <div style="width: 200px; height: 20px; background: url('shapes/heading8.png') no-repeat center; background-size: contain; margin: 1rem auto;"></div>
+            </div>
+
+            <div class="hex-grid">
+                <div class="hex-card">
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-arrow-right hex-icon"></i>
+                        <p class="hex-text">Separate Customer and Vendor boolean options in Contacts.</p>
+                    </div>
+                </div>
+
+                <div class="hex-card">
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-arrow-right hex-icon"></i>
+                        <p class="hex-text">Works seamlessly with Sales, Purchases, Invoicing, and Accounting modules.</p>
+                    </div>
+                </div>
+
+                <div class="hex-card">
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-arrow-right hex-icon"></i>
+                        <p class="hex-text">Helps maintain clean and well-structured partner data.</p>
+                    </div>
+                </div>
+
+                <div class="hex-card">
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-arrow-right hex-icon"></i>
+                        <p class="hex-text">Enables faster partner selection in documents (Quotations, Sales Orders, RFQs).</p>
+                    </div>
+                </div>
+
+                <div class="hex-card">
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-arrow-right hex-icon"></i>
+                        <p class="hex-text">Improves data consistency across business workflows.</p>
+                    </div>
+                </div>
+
+                <div class="hex-card">
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-arrow-right hex-icon"></i>
+                        <p class="hex-text">User-friendly and easy to configure.</p>
+                    </div>
+                </div>
+
+                <div class="hex-card">
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-arrow-right hex-icon"></i>
+                        <p class="hex-text">No impact on existing partner records.</p>
+                    </div>
+                </div>
+
+                <div class="hex-card">
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-arrow-right hex-icon"></i>
+                        <p class="hex-text">Compatible with multi-company environments.</p>
+                    </div>
+                </div>
+
+                <div class="hex-card">
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-arrow-right hex-icon"></i>
+                        <p class="hex-text">Lightweight module with no performance overhead.</p>
+                    </div>
+                </div>
+
+                <div class="hex-card">
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-arrow-right hex-icon"></i>
+                        <p class="hex-text">Ideal replacement for customer/vendor logic from older Odoo versions.</p>
+                    </div>
+                </div>
+
+                <div class="hex-card">
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-arrow-right hex-icon"></i>
+                        <p class="hex-text"><strong>Multi-Language Support</strong><br>
+                        Supported languages: English, German, Arabic, Spanish, French, Chinese</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="cyber-tabs-wrapper">
+        <div class="container">
+            <div class="tab-nav-cyber">
+                <button class="cyber-tab-btn active" onclick="showTab('setup')">Configuration</button>
+                <button class="cyber-tab-btn" onclick="showTab('faqs')">FAQs</button>
+                <button class="cyber-tab-btn" onclick="showTab('support')">Support</button>
+            </div>
+
+            <!-- Setup Tab -->
+            <div id="setup-tab" class="tab-panel">
+                <div class="screenshot-frame">
+                    <p class="screenshot-label">
+                        The partner model contains two boolean fields: Customer and Vendor.
+                    </p>
+                    <img src="screenshots/screenshot-1.png" alt="Flag Fields" class="img-fluid">
+                </div>
+
+                <div class="screenshot-frame">
+                    <p class="screenshot-label">
+                        The Vendor filter displays only partners marked as Vendors.
+                    </p>
+                    <img src="screenshots/screenshot-2.png" alt="Vendor flag Filter" class="img-fluid">
+                </div>
+
+                <div class="screenshot-frame">
+                    <p class="screenshot-label">
+                        Non-vendor records are automatically converted to Vendors and available for RFQ or Purchase Order.
+                    </p>
+                    <img src="screenshots/screenshot-3.png" alt="Purchase App" class="img-fluid">
+                </div>
+
+                <div class="screenshot-frame">
+                    <p class="screenshot-label">
+                        The Customer filter displays only partners marked as Customers.
+                    </p>
+                    <img src="screenshots/screenshot-4.png" alt="Customer Filter" class="img-fluid">
+                </div>
+
+                <div class="screenshot-frame">
+                    <p class="screenshot-label">
+                        Non-customer records are automatically converted to Customers and available for Quotations or Sale Order.
+                    </p>
+                    <img src="screenshots/screenshot-5.png" alt="Sale Order and Quotations" class="img-fluid">
+                </div>
+            </div>
+
+            <!-- FAQs Tab -->
+            <div id="faqs-tab" class="tab-panel" style="display: none;">
+
+                <div class="faq-accordion">
+                    <div class="faq-q">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span>Which Odoo editions are supported by this module?</span>
+                    </div>
+                    <div class="faq-a">
+                        This module supports both Odoo Community and Odoo Enterprise editions.
+                    </div>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-q">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span>Can this module be used on Odoo Online?</span>
+                    </div>
+                    <div class="faq-a">
+                        No, Odoo Online does not allow installation of custom modules.
+                    </div>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-q">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span>What is the purpose of this module?</span>
+                    </div>
+                    <div class="faq-a">
+                        It allows you to manage Customers and Vendors separately using dedicated fields.
+                    </div>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-q">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span>Will this module change existing contact data?</span>
+                    </div>
+                    <div class="faq-a">
+                        No, existing contact records are not modified by the module.
+                    </div>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-q">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span>Is any configuration required after installation?</span>
+                    </div>
+                    <div class="faq-a">
+                        No configuration is required. The fields are available immediately after installation.
+                    </div>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-q">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span>Can a contact be both a Customer and a Vendor?</span>
+                    </div>
+                    <div class="faq-a">
+                        Yes, a contact can be marked as both Customer and Vendor.
+                    </div>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-q">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span>Does this module affect sales or purchase workflows?</span>
+                    </div>
+                    <div class="faq-a">
+                        No, it does not change standard Sales or Purchase workflows.
+                    </div>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-q">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span>Is this module safe to install on a live database?</span>
+                    </div>
+                    <div class="faq-a">
+                        Yes, the module is safe to install on a live database.
+                    </div>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-q">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span>Does this module require any additional dependencies?</span>
+                    </div>
+                    <div class="faq-a">
+                        No additional modules or libraries are required.
+                    </div>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-q">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span>Is this module compatible with multi-company setup?</span>
+                    </div>
+                    <div class="faq-a">
+                        Yes, the module works with Odoo multi-company environments.
+                    </div>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-q">
+                        <i class="fa fa-hand-o-right"></i>
+                        <span>Do you provide support for this module?</span>
+                    </div>
+                    <div class="faq-a">
+                        Yes, basic support is provided. For customization, please contact us.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Support Tab -->
+            <div id="support-tab" class="tab-panel" style="display: none;">
+                <div class="support-cta">
+                    <a href="mailto:support@softhealer.com">
+                        <i class="fa fa-envelope"></i>
+                        <span>Should you need any help, our support team is available at <strong>support@onedevhub.in</strong></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Services -->
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title-glow">Our Services</h2>
+                <div style="width: 200px; height: 20px; background: url('shapes/heading8.png') no-repeat center; background-size: contain; margin: 1rem auto;"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-cube">
+                    <a href="mailto:support@onedevhub.in" target="_blank" style="text-decoration: none;">
+                        <div class="service-icon-wrap">
+                            <img src="services/implementation.png" alt="Implementation">
+                        </div>
+                        <div class="service-name">Odoo Implementation</div>
+                    </a>
+                </div>
+                <div class="service-cube">
+                    <a href="mailto:support@onedevhub.in" target="_blank" style="text-decoration: none;">
+                        <div class="service-icon-wrap">
+                            <img src="services/customization.png" alt="Customization">
+                        </div>
+                        <div class="service-name">Odoo Customization</div>
+                    </a>
+                </div>
+                <div class="service-cube">
+                    <a href="mailto:support@onedevhub.in" target="_blank" style="text-decoration: none;">
+                        <div class="service-icon-wrap">
+                            <img src="services/support and maintenance.png" alt="Support">
+                        </div>
+                        <div class="service-name">Support & Maintenance</div>
+                    </a>
+                </div>
+                <div class="service-cube">
+                    <a href="mailto:support@onedevhub.in" target="_blank" style="text-decoration: none;">
+                        <div class="service-icon-wrap">
+                            <img src="services/mobile apps.png" alt="Mobile Apps">
+                        </div>
+                        <div class="service-name">Mobile Apps</div>
+                    </a>
+                </div>
+                <div class="service-cube">
+                    <a href="mailto:support@onedevhub.in" target="_blank" style="text-decoration: none;">
+                        <div class="service-icon-wrap">
+                            <img src="services/odoo_migration.png" alt="Migration Service">
+                        </div>
+                        <div class="service-name">Migration Service</div>
+                    </a>
+                </div>
+                <div class="service-cube">
+                    <a href="mailto:support@onedevhub.in" target="_blank" style="text-decoration: none;">
+                        <div class="service-icon-wrap">
+                            <img src="services/integration(1).png" alt="External Integration">
+                        </div>
+                        <div class="service-name">External Integration</div>
+                    </a>
+                </div>
+                <div class="service-cube">
+                    <a href="mailto:support@onedevhub.in" target="_blank" style="text-decoration: none;">
+                        <div class="service-icon-wrap">
+                            <img src="services/train1.png" alt="Odoo Training">
+                        </div>
+                        <div class="service-name">Odoo Training</div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            document.getElementById('setup-tab').style.display = 'none';
+            document.getElementById('faqs-tab').style.display = 'none';
+            document.getElementById('support-tab').style.display = 'none';
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.cyber-tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Show selected tab and activate button
+            document.getElementById(tabName + '-tab').style.display = 'block';
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
