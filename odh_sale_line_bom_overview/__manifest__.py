@@ -5,9 +5,11 @@
     'name': "Sale Line BOM Overview",
     'version': '18.0.1.0.1',
     'category': 'Manufacturing',
+    'summary': """ Quickly view the Bill of Materials (BOM) overview directly from Sales Orders without navigating through products or manufacturing menus """,
+    'description': """ Quickly view the Bill of Materials (BOM) overview directly from Sales Orders without navigating through products or manufacturing menus """,
     'author': 'OneDevHub',
     'website': 'https://onedevhub.in',
-    'license': 'LGPL-3',
+    'license': 'OPL-1',
     'depends': ['sale_management',
                 'mrp'],
     'data': [
