@@ -17,7 +17,7 @@
     ],
     "price": "5.00",
     "currency": "USD",
-    "images": ["static/description/banner_image.jpg"],
+    "images": ["static/description/app_img/banner_image.jpg"],
     'installable': True,
     'application': True,
     'auto_install': False,
