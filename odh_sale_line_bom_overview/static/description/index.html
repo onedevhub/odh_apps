@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Order Line BOM Overview - Odoo Module</title>
+</head>
+<body>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section style="padding:60px 40px;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td width="55%" valign="top" style="padding-right:40px;">
+                    <h1 style="font-size:2.4rem; font-weight:700; margin:0 0 12px 0; line-height:1.2;">Sale Order Line BOM Overview</h1>
+                    <img src="img/blue_divider_small.png" alt="" style="width:70px; height:3px; display:block; margin:0 0 20px 0;">
+
+                    <p style="font-size:0.95rem; line-height:1.8; margin:0 0 14px 0;">
+                        In standard Odoo, checking a product's <strong style="color:#4d9fff;">Bill of Materials (BOM)</strong> from a Sales Order
+                        requires multiple steps—opening the product, navigating to BOMs, selecting the correct BOM,
+                        and then opening the BOM overview. This interrupts the sales workflow and consumes valuable time.
+                    </p>
+
+                    <p style="font-size:0.95rem; line-height:1.8; margin:0 0 14px 0;">
+                        To solve this, we developed <strong style="color:#4d9fff;">Sale Order Line BOM Overview</strong>, a module that brings
+                        BOM visibility directly into the Sales Order line, allowing users to access BOM details instantly
+                        without leaving the Sales Order.
+                    </p>
+
+                    <p style="font-size:1rem; font-weight:600; margin:20px 0 10px 0;">Key Features</p>
+                    <ul style="font-size:0.93rem; line-height:1.9; margin:0; padding-left:20px;">
+                        <li>BOM selection directly on Sales Order lines</li>
+                        <li>Automatically loads all related BOMs when a product is selected</li>
+                        <li>Auto-selects the BOM if the product has only one available BOM</li>
+                        <li>Smart <strong>BOM Overview</strong> button that appears only after a BOM is selected</li>
+                        <li>One-click access to the complete BOM structure in a new page</li>
+                        <li>Eliminates unnecessary navigation through Product and Manufacturing menus</li>
+                        <li>Improves coordination between sales, manufacturing, and planning teams</li>
+                    </ul>
+
+                    <p style="font-size:1rem; font-weight:600; margin:20px 0 10px 0;">How It Works</p>
+                    <ul style="font-size:0.93rem; line-height:1.9; margin:0; padding-left:20px;">
+                        <li>Select a product on the Sales Order line</li>
+                        <li>All related BOMs are loaded automatically</li>
+                        <li>If only one BOM exists, it is set by default</li>
+                        <li>Click <strong>BOM Overview</strong> to instantly open the BOM structure</li>
+                    </ul>
+
+                    <p style="font-size:1rem; font-weight:600; margin:20px 0 10px 0;">Why Use This Module?</p>
+                    <ul style="font-size:0.93rem; line-height:1.9; margin:0; padding-left:20px;">
+                        <li>Speeds up Sales Order processing</li>
+                        <li>Provides better visibility for production planning</li>
+                        <li>Reduces user clicks and navigation</li>
+                        <li>Delivers a cleaner and more intuitive user experience</li>
+                        <li>Ideal for manufacturing-driven businesses</li>
+                    </ul>
+                </td>
+                <td width="45%" valign="middle" align="center">
+                    <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(77,159,255,0.3); border-radius:12px; padding:30px; text-align:center;">
+                        <img src="app_img/banner_image.jpg" alt="Sale Order Line BOM Overview" style="max-width:100%; border-radius:8px; border:2px solid rgba(77,159,255,0.4);">
+                        <div style="margin-top:20px;">
+                            <a href="https://youtu.be/FVjZlwZ4f40" target="_blank" style="color:#4d9fff; font-size:1rem; font-weight:600; text-decoration:none; display:inline-block;">
+                                <img src="img/video.png" alt="Video" style="width:50px; display:block; margin:0 auto 8px;">
+                                ▶ Watch How It Works<br>
+                                <span style="font-size:0.85rem; color:#8899bb; font-weight:400;">Click to view demo video</span>
+                            </a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ===== FEATURES SECTION ===== -->
+    <section style="background:#f0f2f5; padding:60px 40px;">
+        <h2 style="font-size:1.8rem; font-weight:700; color:#1a1a2e; text-align:center; margin:0 0 8px 0;">Features</h2>
+        <div style="text-align:center; margin:0 0 40px 0;">
+            <img src="img/blue_divider.png" alt="" style="width:60px; height:3px; display:inline-block;">
+        </div>
+
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td width="50%" valign="top" style="padding:0 10px 20px 0;">
+                    <div style="border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Add BoM selection field on Sale Order Line.
+                        </p>
+                    </div>
+                </td>
+                <td width="50%" valign="top" style="padding:0 0 20px 10px;">
+                    <div style="border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Auto-assign BoM when a product has exactly one normal BoM.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" valign="top" style="padding:0 10px 20px 0;">
+                    <div style="border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Automatically clear BoM when the product is changed.
+                        </p>
+                    </div>
+                </td>
+                <td width="50%" valign="top" style="padding:0 0 20px 10px;">
+                    <div style="border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Open BoM Overview report directly from Sale Order Line.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" valign="top" style="padding:0 10px 20px 0;">
+                    <div style="border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Works seamlessly with Sales and Manufacturing modules.
+                        </p>
+                    </div>
+                </td>
+                <td width="50%" valign="top" style="padding:0 0 20px 10px;">
+                    <div style="border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Eliminates unnecessary navigation through Product and Manufacturing menus.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" valign="top" style="padding:0 10px 20px 0;">
+                    <div style="border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;No impact on standard Odoo Sales or Purchase workflows.
+                        </p>
+                    </div>
+                </td>
+                <td width="50%" valign="top" style="padding:0 0 20px 10px;">
+                    <div style="border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Improves coordination between sales, manufacturing, and planning teams.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ===== CONFIGURATION SECTION ===== -->
+    <section style="padding:60px 40px;">
+        <h2 style="font-size:1.8rem; font-weight:700; color:#1a1a2e; text-align:center; margin:0 0 8px 0;">Configuration</h2>
+        <div style="text-align:center; margin:0 0 40px 0;">
+            <img src="img/blue_divider.png" alt="" style="width:60px; height:3px; display:inline-block;">
+        </div>
+
+        <div style="margin-bottom:40px;">
+            <div style="background:#f0f4ff; border:1px solid #d0d9ff; border-radius:6px; padding:14px 20px; margin-bottom:16px; text-align:center;">
+                <p style="margin:0; font-size:0.95rem; font-weight:600; color:#1a1a2e;">The selected BOM visible in the BOM column with a BOM Overview button.</p>
+            </div>
+            <img src="screenshots/screenshot-1.png" alt="BOM in Sale order line" style="width:100%; border-radius:8px; border:1px solid #e2e6ea; display:block;">
+        </div>
+
+        <div style="margin-bottom:40px;">
+            <div style="background:#f0f4ff; border:1px solid #d0d9ff; border-radius:6px; padding:14px 20px; margin-bottom:16px; text-align:center;">
+                <p style="margin:0; font-size:0.95rem; font-weight:600; color:#1a1a2e;">Associated product BOMs are selectable directly from the BOM column.</p>
+            </div>
+            <img src="screenshots/screenshot-2.png" alt="Associated product BoMs selection" style="width:100%; border-radius:8px; border:1px solid #e2e6ea; display:block;">
+        </div>
+
+        <div style="margin-bottom:40px;">
+            <div style="background:#f0f4ff; border:1px solid #d0d9ff; border-radius:6px; padding:14px 20px; margin-bottom:16px; text-align:center;">
+                <p style="margin:0; font-size:0.95rem; font-weight:600; color:#1a1a2e;">Click the BOM Overview button to view the selected BOM details.</p>
+            </div>
+            <img src="screenshots/screenshot-3.png" alt="BOM Overview button" style="width:100%; border-radius:8px; border:1px solid #e2e6ea; display:block;">
+        </div>
+
+        <div style="margin-bottom:20px;">
+            <div style="background:#f0f4ff; border:1px solid #d0d9ff; border-radius:6px; padding:14px 20px; margin-bottom:16px; text-align:center;">
+                <p style="margin:0; font-size:0.95rem; font-weight:600; color:#1a1a2e;">Redirects to the BOM Overview with component and cost details.</p>
+            </div>
+            <img src="screenshots/screenshot-4.png" alt="BOM Overview" style="width:100%; border-radius:8px; border:1px solid #e2e6ea; display:block;">
+        </div>
+    </section>
+
+    <!-- ===== FAQs SECTION ===== -->
+    <section style="background:#f0f2f5; padding:60px 40px;">
+        <h2 style="font-size:1.8rem; font-weight:700; color:#1a1a2e; text-align:center; margin:0 0 8px 0;">Frequently Asked Questions</h2>
+        <div style="text-align:center; margin:0 0 40px 0;">
+            <img src="img/blue_divider.png" alt="" style="width:60px; height:3px; display:inline-block;">
+        </div>
+
+        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Is this app compatible with Odoo Community as well as Enterprise?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">Yes, this app works perfectly with Odoo Enterprise (Odoo.sh &amp; Premise) as well as Community.</p>
+        </div>
+        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Is this application compatible with odoo.com (odoo saas)?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">No, this application is not compatible with odoo.com (odoo saas).</p>
+        </div>
+        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;I want some customization in this app. How can I request it?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">Please Contact Us at <a href="mailto:support@onedevhub.in" style="color:#0d6efd;">support@onedevhub.in</a> to request customization.</p>
+        </div>
+        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Do I get free support?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">Yes, we provide free support for 100 days.</p>
+        </div>
+        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Do I get free updates?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">Yes, you will get free updates for lifetime.</p>
+        </div>
+        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Do we need to install any additional libraries/modules for using this module?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">No, you don't need to install additional libraries.</p>
+        </div>
+        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Do I have to buy the module for each version?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">Yes, you have to download the module for each version (17, 18, 19) except in version 12 or lower.</p>
+        </div>
+        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;What if I purchase the module in the wrong version? Can I exchange it with another version?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">No, we do not provide any kind of exchange.</p>
+        </div>
+    </section>
+
+    <!-- ===== SUPPORT SECTION ===== -->
+    <section style="padding:50px 40px;">
+        <h2 style="font-size:1.8rem; font-weight:700; color:#1a1a2e; text-align:center; margin:0 0 8px 0;">Support</h2>
+        <div style="text-align:center; margin:0 0 40px 0;">
+            <img src="img/blue_divider.png" alt="" style="width:60px; height:3px; display:inline-block;">
+        </div>
+
+        <div style="background:#f0f4ff; border:2px solid #0d6efd; border-radius:10px; padding:30px; text-align:center; max-width:700px; margin:0 auto;">
+            <p style="margin:0; font-size:1.05rem; color:#333; line-height:1.7;">
+                Should you need any help, our support team is available at<br>
+                <a href="mailto:support@onedevhub.in" style="color:#0d6efd; font-weight:700; font-size:1.1rem; text-decoration:none;">&#9993; &nbsp;support@onedevhub.in</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== OUR SERVICES SECTION ===== -->
+    <section style="background:#f0f2f5; padding:60px 40px;">
+        <h2 style="font-size:1.8rem; font-weight:700; color:#1a1a2e; text-align:center; margin:0 0 8px 0;">Our Services</h2>
+        <div style="text-align:center; margin:0 0 40px 0;">
+            <img src="img/blue_divider.png" alt="" style="width:60px; height:3px; display:inline-block;">
+        </div>
+
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/implementation.png" alt="Implementation" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Odoo Implementation</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/customization.png" alt="Customization" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Odoo Customization</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/support and maintenance.png" alt="Support" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Support &amp; Maintenance</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/mobile apps.png" alt="Mobile Apps" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Mobile Apps</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/odoo_migration.png" alt="Migration" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Migration Service</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/integration(1).png" alt="Integration" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">External Integration</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style="border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/train1.png" alt="Training" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Odoo Training</p>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>
