@@ -15,7 +15,6 @@
     'data': [
         'views/sale_order_views.xml',
     ],
-    "price": "5.00",
     "currency": "USD",
     "images": ["static/description/app_img/banner_image.jpg"],
     'installable': True,
