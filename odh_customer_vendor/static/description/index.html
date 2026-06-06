@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Vendor Option - Odoo Module</title>
+</head>
+<body>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section style=" padding:60px 40px;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td width="55%" valign="top" style="padding-right:40px;">
+                    <h1 style="font-size:2.4rem; font-weight:700;  margin:0 0 12px 0; line-height:1.2;">Customer Vendor Option</h1>
+                    <img src="img/blue_divider_small.png" alt="" style="width:70px; height:3px; display:block; margin:0 0 20px 0;">
+
+                    <p style="font-size:0.95rem; line-height:1.8; margin:0 0 14px 0;">
+                        In earlier versions of Odoo, Contacts included separate boolean fields to easily differentiate between
+                        <strong style="color:#4d9fff;">Customers</strong> and <strong style="color:#4d9fff;">Vendors</strong>.
+                        However, in Odoo 13, these fields were removed, which makes it inconvenient to clearly identify and manage
+                        customers and vendors separately.
+                    </p>
+
+                    <p style=" font-size:0.95rem; line-height:1.8; margin:0 0 14px 0;">
+                        To solve this issue, we have developed this module that restores the classic customer and vendor
+                        separation functionality—just like in previous Odoo versions.
+                    </p>
+
+                    <p style=" font-size:1rem; font-weight:600; margin:20px 0 10px 0;">Key Features</p>
+                    <ul style="font-size:0.93rem; line-height:1.9; margin:0; padding-left:20px;">
+                        <li>Adds two separate boolean fields in Contacts:
+                            <ul style="margin:4px 0; padding-left:18px;">
+                                <li><strong style="">Customer</strong></li>
+                                <li><strong style="">Vendor</strong></li>
+                            </ul>
+                        </li>
+                        <li>Easily identify and manage customers and vendors independently</li>
+                        <li>Simplifies filtering, searching, and reporting</li>
+                        <li>Improves usability for accounting, sales, and purchase workflows</li>
+                        <li>Seamless integration with Odoo 17</li>
+                    </ul>
+
+                    <p style=" font-size:1rem; font-weight:600; margin:20px 0 10px 0;">Why Use This Module?</p>
+                    <ul style="font-size:0.93rem; line-height:1.9; margin:0; padding-left:20px;">
+                        <li>Ideal for users migrating from older Odoo versions</li>
+                        <li>Eliminates confusion caused by merged partner roles</li>
+                        <li>Enhances data clarity and operational efficiency</li>
+                        <li>Lightweight and easy to use</li>
+                    </ul>
+                </td>
+                <td width="45%" valign="middle" align="center">
+                    <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(77,159,255,0.3); border-radius:12px; padding:30px; text-align:center;">
+                        <img src="app_img/banner_image.jpg" alt="Customer Vendor Option" style="max-width:100%; border-radius:8px; border:2px solid rgba(77,159,255,0.4);">
+                        <div style="margin-top:20px;">
+                            <a href="https://youtu.be/4i50OvYU704" target="_blank" style="color:#4d9fff; font-size:1rem; font-weight:600; text-decoration:none; display:inline-block;">
+                                <img src="img/video.png" alt="Video" style="width:50px; display:block; margin:0 auto 8px;">
+                                ▶ Watch How It Works<br>
+                                <span style="font-size:0.85rem; color:#8899bb; font-weight:400;">Click to view demo video</span>
+                            </a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ===== FEATURES SECTION ===== -->
+    <section style="background:#f0f2f5; padding:60px 40px;">
+        <h2 style="font-size:1.8rem; font-weight:700; color:#1a1a2e; text-align:center; margin:0 0 8px 0;">Features</h2>
+        <div style="text-align:center; margin:0 0 40px 0;">
+            <img src="img/blue_divider.png" alt="" style="width:60px; height:3px; display:inline-block;">
+        </div>
+
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td width="50%" valign="top" style="padding:0 10px 20px 0;">
+                    <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Separate Customer and Vendor boolean options in Contacts.
+                        </p>
+                    </div>
+                </td>
+                <td width="50%" valign="top" style="padding:0 0 20px 10px;">
+                    <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Works seamlessly with Sales, Purchases, Invoicing, and Accounting modules.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" valign="top" style="padding:0 10px 20px 0;">
+                    <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Helps maintain clean and well-structured partner data.
+                        </p>
+                    </div>
+                </td>
+                <td width="50%" valign="top" style="padding:0 0 20px 10px;">
+                    <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Enables faster partner selection in documents (Quotations, Sales Orders, RFQs).
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" valign="top" style="padding:0 10px 20px 0;">
+                    <div style="border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Improves data consistency across business workflows.
+                        </p>
+                    </div>
+                </td>
+                <td width="50%" valign="top" style="padding:0 0 20px 10px;">
+                    <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;User-friendly and easy to configure.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" valign="top" style="padding:0 10px 20px 0;">
+                    <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;No impact on existing partner records.
+                        </p>
+                    </div>
+                </td>
+                <td width="50%" valign="top" style="padding:0 0 20px 10px;">
+                    <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Compatible with multi-company environments.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" valign="top" style="padding:0 10px 20px 0;">
+                    <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Lightweight module with no performance overhead.
+                        </p>
+                    </div>
+                </td>
+                <td width="50%" valign="top" style="padding:0 0 20px 10px;">
+                    <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;Ideal replacement for customer/vendor logic from older Odoo versions.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" valign="top" style="padding:0 0 20px 0;">
+                    <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:16px 20px; border-left:4px solid #0d6efd;">
+                        <p style="margin:0; color:#444; font-size:0.93rem; line-height:1.6;">
+                            &#10148; &nbsp;<strong>Multi-Language Support</strong> — Supported languages: English, German, Arabic, Spanish, French, Chinese
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ===== CONFIGURATION SECTION ===== -->
+    <section style=" padding:60px 40px;">
+        <h2 style="font-size:1.8rem; font-weight:700; color:#1a1a2e; text-align:center; margin:0 0 8px 0;">Configuration</h2>
+        <div style="text-align:center; margin:0 0 40px 0;">
+            <img src="img/blue_divider.png" alt="" style="width:60px; height:3px; display:inline-block;">
+        </div>
+
+        <div style="margin-bottom:40px;">
+            <div style="background:#f0f4ff; border:1px solid #d0d9ff; border-radius:6px; padding:14px 20px; margin-bottom:16px; text-align:center;">
+                <p style="margin:0; font-size:0.95rem; font-weight:600; color:#1a1a2e;">The partner model contains two boolean fields: Customer and Vendor.</p>
+            </div>
+            <img src="screenshots/screenshot-1.png" alt="Flag Fields" style="width:100%; border-radius:8px; border:1px solid #e2e6ea; display:block;">
+        </div>
+
+        <div style="margin-bottom:40px;">
+            <div style="background:#f0f4ff; border:1px solid #d0d9ff; border-radius:6px; padding:14px 20px; margin-bottom:16px; text-align:center;">
+                <p style="margin:0; font-size:0.95rem; font-weight:600; color:#1a1a2e;">The Vendor filter displays only partners marked as Vendors.</p>
+            </div>
+            <img src="screenshots/screenshot-2.png" alt="Vendor flag Filter" style="width:100%; border-radius:8px; border:1px solid #e2e6ea; display:block;">
+        </div>
+
+        <div style="margin-bottom:40px;">
+            <div style="background:#f0f4ff; border:1px solid #d0d9ff; border-radius:6px; padding:14px 20px; margin-bottom:16px; text-align:center;">
+                <p style="margin:0; font-size:0.95rem; font-weight:600; color:#1a1a2e;">Non-vendor records are automatically converted to Vendors and available for RFQ or Purchase Order.</p>
+            </div>
+            <img src="screenshots/screenshot-3.png" alt="Purchase App" style="width:100%; border-radius:8px; border:1px solid #e2e6ea; display:block;">
+        </div>
+
+        <div style="margin-bottom:40px;">
+            <div style="background:#f0f4ff; border:1px solid #d0d9ff; border-radius:6px; padding:14px 20px; margin-bottom:16px; text-align:center;">
+                <p style="margin:0; font-size:0.95rem; font-weight:600; color:#1a1a2e;">The Customer filter displays only partners marked as Customers.</p>
+            </div>
+            <img src="screenshots/screenshot-4.png" alt="Customer Filter" style="width:100%; border-radius:8px; border:1px solid #e2e6ea; display:block;">
+        </div>
+
+        <div style="margin-bottom:20px;">
+            <div style="background:#f0f4ff; border:1px solid #d0d9ff; border-radius:6px; padding:14px 20px; margin-bottom:16px; text-align:center;">
+                <p style="margin:0; font-size:0.95rem; font-weight:600; color:#1a1a2e;">Non-customer records are automatically converted to Customers and available for Quotations or Sale Order.</p>
+            </div>
+            <img src="screenshots/screenshot-5.png" alt="Sale Order and Quotations" style="width:100%; border-radius:8px; border:1px solid #e2e6ea; display:block;">
+        </div>
+    </section>
+
+    <!-- ===== FAQs SECTION ===== -->
+    <section style="background:#f0f2f5; padding:60px 40px;">
+        <h2 style="font-size:1.8rem; font-weight:700; color:#1a1a2e; text-align:center; margin:0 0 8px 0;">Frequently Asked Questions</h2>
+        <div style="text-align:center; margin:0 0 40px 0;">
+            <img src="img/blue_divider.png" alt="" style="width:60px; height:3px; display:inline-block;">
+        </div>
+
+        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Which Odoo editions are supported by this module?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">This module supports both Odoo Community and Odoo Enterprise editions.</p>
+        </div>
+        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Can this module be used on Odoo Online?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">No, Odoo Online does not allow installation of custom modules.</p>
+        </div>
+        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;What is the purpose of this module?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">It allows you to manage Customers and Vendors separately using dedicated fields.</p>
+        </div>
+        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Will this module change existing contact data?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">No, existing contact records are not modified by the module.</p>
+        </div>
+        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Is any configuration required after installation?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">No configuration is required. The fields are available immediately after installation.</p>
+        </div>
+        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Can a contact be both a Customer and a Vendor?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">Yes, a contact can be marked as both Customer and Vendor.</p>
+        </div>
+        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Does this module affect sales or purchase workflows?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">No, it does not change standard Sales or Purchase workflows.</p>
+        </div>
+        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Is this module safe to install on a live database?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">Yes, the module is safe to install on a live database.</p>
+        </div>
+        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Does this module require any additional dependencies?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">No additional modules or libraries are required.</p>
+        </div>
+        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Is this module compatible with multi-company setup?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">Yes, the module works with Odoo multi-company environments.</p>
+        </div>
+        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 24px; margin-bottom:12px;">
+            <p style="font-size:0.97rem; font-weight:600; color:#1a1a2e; margin:0 0 8px 0;">&#9654; &nbsp;Do you provide support for this module?</p>
+            <p style="font-size:0.92rem; color:#555; margin:0; padding-left:20px; line-height:1.7;">Yes, basic support is provided. For customization, please contact us.</p>
+        </div>
+    </section>
+
+    <!-- ===== SUPPORT SECTION ===== -->
+    <section style=" padding:50px 40px;">
+        <h2 style="font-size:1.8rem; font-weight:700; color:#1a1a2e; text-align:center; margin:0 0 8px 0;">Support</h2>
+        <div style="text-align:center; margin:0 0 40px 0;">
+            <img src="img/blue_divider.png" alt="" style="width:60px; height:3px; display:inline-block;">
+        </div>
+
+        <div style="background:#f0f4ff; border:2px solid #0d6efd; border-radius:10px; padding:30px; text-align:center; max-width:700px; margin:0 auto;">
+            <p style="margin:0; font-size:1.05rem; color:#333; line-height:1.7;">
+                Should you need any help, our support team is available at<br>
+                <a href="mailto:support@onedevhub.in" style="color:#0d6efd; font-weight:700; font-size:1.1rem; text-decoration:none;">&#9993; &nbsp;support@onedevhub.in</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== OUR SERVICES SECTION ===== -->
+    <section style="background:#f0f2f5; padding:60px 40px;">
+        <h2 style="font-size:1.8rem; font-weight:700; color:#1a1a2e; text-align:center; margin:0 0 8px 0;">Our Services</h2>
+        <div style="text-align:center; margin:0 0 40px 0;">
+            <img src="img/blue_divider.png" alt="" style="width:60px; height:3px; display:inline-block;">
+        </div>
+
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/implementation.png" alt="Implementation" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Odoo Implementation</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/customization.png" alt="Customization" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Odoo Customization</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/support and maintenance.png" alt="Support" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Support &amp; Maintenance</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/mobile apps.png" alt="Mobile Apps" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Mobile Apps</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/odoo_migration.png" alt="Migration" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Migration Service</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/integration(1).png" alt="Integration" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">External Integration</p>
+                        </div>
+                    </a>
+                </td>
+                <td width="14%" align="center" valign="top" style="padding:10px;">
+                    <a href="mailto:support@onedevhub.in" style="text-decoration:none; display:block; text-align:center;">
+                        <div style=" border:1px solid #e2e6ea; border-radius:8px; padding:20px 10px; text-align:center;">
+                            <img src="services/train1.png" alt="Training" style="width:50px; height:50px; object-fit:contain; display:block; margin:0 auto 10px;">
+                            <p style="font-size:0.8rem; font-weight:600; color:#333; margin:0; line-height:1.3;">Odoo Training</p>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>

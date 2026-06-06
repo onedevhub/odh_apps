@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<odoo>
+     <!-- Extend the Partner form view to add custom fields for Customer and Vendor flags. -->
+    <record id="view_partners_form_inherit_odh_customer_vendor" model="ir.ui.view">
+        <field name="name">view.partners.form.inherit.odh.customer.vendor</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <!-- Add Customer checkbox to Sales & Purchases tab -->
+            <xpath expr="//sheet/notebook/page[@name='sales_purchases']/group/group[1]" position="inside">
+                <field name="odh_customer" />
+            </xpath>
+            <!-- Add Vendor checkbox to Sales & Purchases tab -->
+            <xpath expr="//sheet/notebook/page[@name='sales_purchases']/group/group[2]" position="inside">
+                <field name="odh_vendor" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Extend Partner search view to add filters for Customers and Vendors based on custom flags. -->
+    <record id="account.res_partner_view_search" model="ir.ui.view">
+        <field name="name">res.partner.search.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="before">
+                <filter string="Customers" name="customer" domain="[('odh_customer','=', True)]" />
+                <filter string="Vendors" name="supplier" domain="[('odh_vendor','=', True)]" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Customers menu action to view and create partners marked as Customers -->
+    <record id="account.res_partner_action_customer" model="ir.actions.act_window">
+        <field name="name">Customers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="context">{'default_odh_customer':True,'search_default_customer': 1,'res_partner_search_mode': 'customer', 'default_is_company': True, 'default_customer_rank': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new customer in your address book
+            </p>
+            <p>
+                Odoo helps you easily track all activities related to a customer.
+            </p>
+        </field>
+    </record>
+
+    <!-- Vendors menu action to view and create partners marked as Vendors -->
+    <record id="account.res_partner_action_supplier" model="ir.actions.act_window">
+        <field name="name">Suppliers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="context">{'default_odh_vendor':True,'search_default_supplier': 1,'res_partner_search_mode': 'supplier', 'default_is_company': True, 'default_supplier_rank': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new supplier in your address book
+            </p>
+            <p>
+                Odoo helps you easily track all activities related to a supplier.
+            </p>
+        </field>
+    </record>
+</odoo>
