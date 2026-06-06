@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Bill of Material field Sale Order Form View-->
+    <record id="sale_view_order_form_inherit_odh_so_bom_selection" model="ir.ui.view">
+        <field name="name">sale.order.view.form.inherit.odh.so.bom.selection</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/list/field[@name='name']" position="after">
+                    <field name="bom_id"
+                           domain="[('product_tmpl_id', '=', product_template_id)]"
+                           options="{'no_create': True, 'no_create_edit': True}"
+                           string="BOM" />
+
+                    <button name="action_bom_overview"
+                            type="object"
+                            string="BOM Overview"
+                            class="oe_stat_button"
+                            icon="fa-list"
+                            invisible="not (bom_id)"
+                            attrs="{'invisible': [('bom_id', '=', False)]}"/>
+                </xpath>
+        </field>
+    </record>
+</odoo>
+
