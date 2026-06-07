@@ -20,7 +20,8 @@
         "views/purchase_views.xml",
         "views/sale_order_views.xml",
     ],
-    "installable": True,
-    "application": True,
-    "auto_install": False,    
+    "images": ["static/description/app_img/banner_image.jpg"],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }
